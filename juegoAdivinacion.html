@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Juego de adivinacion</h1>
+
+    <script>
+        function saltarLinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase){
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var numeroPensado = Math.round(Math.random()*10);
+        var intento = 3
+        var contador = 1
+        
+        
+
+        while (contador<= intento) {
+            
+            var numeroLanzado = parseInt(prompt("ingrese el numero que se locurra entre 0 y 10"));
+
+            if(numeroPensado==numeroLanzado){
+                alert("usted acerto socio" + intento + "el numero pensado era" + numeroPensado);
+                break;
+            }
+
+            else {
+                alert("usted erro mi socio");
+            }
+
+            contador++;
+        }
+
+        imprimir("fin");
+
+    </script>
+</body>
+</html>
